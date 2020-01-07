@@ -1,5 +1,43 @@
 $colors: (
-    primary: #FFFFFF,
-    secondary: #2D3436,
-    accent:#6C5CE7
+  primary: #ffffff,
+  secondary: #2d3436,
+  accent: #6c5ce7
 );
+
+.nav-wrapper {
+  background-color: map-get($colors, primary);
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  border-top: 3px solid #000000;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav--lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & li:nth-child(2) {
+    margin-left: auto;
+  }
+
+  & li:nth-child(6) {
+    margin-left: auto;
+  }
+
+  & p {
+    color: #000000;
+  }
+
+  li a {
+    padding: 0 10px;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      color: #6c5ce7;
+    }
+  }
+}

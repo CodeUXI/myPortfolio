@@ -1,80 +1,84 @@
-@import "./navbar.scss";
+@import "./navbar";
+@import "./about";
+@import "./footer";
+@import "./buttons";
 
 $colors: (
-    primary: #FFFFFF,
-    secondary: #2D3436,
-    accent:#6C5CE7,
-    write: #000000
+  primary: #ffffff,
+  secondary: #2d3436,
+  accent: #6c5ce7,
+  write: #000000
 );
 
 $fonts: (
-    bold: 3rem,
-    medium: 1.5rem
+  bold: 3rem,
+  medium: 1.5rem
 );
 
-body, html {
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
 
 body {
-    background-color: map-get($colors, primary);
-    color: map-get($colors, primary );
-    font-family: poppins;
-}
-
-
-.nav-wrapper {
-    background-color: map-get($colors, primary);
+  background-color: map-get($colors, primary);
+  color: map-get($colors, primary);
+  font-family: poppins;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .header {
-    margin-top: 0;
-    background-image: url(../images/Rectangle2.jpg);
-    height: 80vh;
+  margin-top: 0;
+  background-image: url("../images/Rectangle2.jpg");
+  height: 80vh;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-p {
-    text-align: left;
-    font-weight: map-get($fonts, medium);
-}
+ul {
+  list-style: none;
 }
 
-.picture {
-    img{
-        position: absolute;
-        bottom: 20px;
-    }
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+
+  /* for edge cases: */
+  //   width: 100%;
+  //   max-width: 100%;
+
+  width: 1170px;
+
+  padding-right: 15px;
+  padding-left: 15px;
+
+  //   @include for-desktop-up {
+  //     width: 1170px;
+  //   }
 }
 
 .port {
-    color: black;
-    text-align: center;
-    margin-left: 10rem;
+  color: black;
+  text-align: center;
+  margin-left: 10rem;
 }
 
 .box {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .logo {
-    color: black;
-    font-family: Galada, cursive;
-    font-weight: bolder;
-    font-size: 2.5rem;
-    margin-left: 3rem;
-    margin-right: 5rem;
+  color: black;
+  font-family: Galada, cursive;
+  font-weight: bolder;
+  font-size: 2.5rem;
 }
 
 .text {
-    color: black;
-    margin: 0;
-}
-
-.btn {
-    background-color: map-get($colors, primary);
-    color: black;
-    border: 1px solid black;
+  color: black;
+  margin: 0;
 }
